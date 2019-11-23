@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class Customer {
+	static String name; 
+	static String address; 
+	int age;
+	String role;
+public Customer(String name, String role) {
+	
+	this.name=name;
+	this.role= role;
+	
+}
+	public void setAge(int age) {
+		this.age=age;
+		
+		
+	}
+	 public int getAge() {
+		 
+		 return age;
+	 }
+	 
+	 public void nameAndAddress() {
+		 
+		 
+		 
+		 Scanner enter = new Scanner(System.in);
+		 //System.out.println("Enter your name:");
+		 //name=enter.nextLine();
+		 System.out.println("Enter your address:");
+		 address=enter.nextLine();
+	 }
+	 
+	 private String changeAddress () {
+		 String more1;
+		 
+		 more1 = "Your adress is:"+address;
+		 
+		 return  more1;
+		 
+	 }
+	 
+	 public static void main (String args[]) {
+		 
+		 
+		 Customer obj1 = new Customer("Chido Gondo", "Customer");
+		 
+		 obj1.changeAddress();
+		 
+		 obj1.setAge(25);
+		 
+		 obj1.nameAndAddress();
+		 if (name.compareTo(address)==0) {
+		 System.out.println( "Your name is:"+obj1.name);
+		 System.out.println( "your role is:"+obj1.role);
+		 System.out.println("Your age is:"+obj1.getAge());
+		 System.out.println( obj1.changeAddress());
+		 System.out.println( name.charAt(6));
+		 //System.out.println( name.codePointAt(2));
+		System.out.println( address.format(address)); 
+		 }
+		 else {
+			 System.out.println( "not maching"); 
+		 }
+	 }
+}
